@@ -207,10 +207,11 @@ const pTag1 = document.querySelector('.first-parallel')
 
 
 // 프로필 더보기
-$('.pro_in_down').click(function(){
-  $('.pro_ment').fadeToggle();
-  $('.more_pro').fadeToggle();
-  $('.hi_img').fadeToggle();
+$('.profile_btn').click(function(){
+  // $('.pro_ment').fadeToggle();
+  $('.more_pro').slideDown();
+  $('.more_inner').fadeIn();
+  // $('.hi_img').fadeToggle();
 
   $('.bar1').css('width', '90%');
   $('.bar2').css('width', '90%');
@@ -223,6 +224,11 @@ $('.pro_in_down').click(function(){
   $('.bar9').css('width', '75%');
   $('.bar10').css('width', '90%');
   $('.bar11').css('width', '80%');
+});
+
+$('.pro_close').click(function(){
+  $('.more_pro').slideUp();
+  $('.more_inner').fadeOut();
 });
 
 

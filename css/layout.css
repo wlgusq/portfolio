@@ -233,10 +233,10 @@ header{width: 100%;}
   width: 1250px;
   box-sizing: border-box;
 }
-.con_list > div > dl{color: #fff; width: 600px; margin: 70px 0px; padding-left: 130px; box-sizing: border-box;}
+.con_list > div > dl{color: #fff; width: 600px; margin: 70px 0px; padding-left: 150px; box-sizing: border-box;}
 .con_list > div > dl > dt{font-size: 25px;}
 .con_list > div > dl > dd:nth-child(2){font-size: 40px; margin: 50px 0px 35px 0px;}
-.con_list > div > dl > dd:last-child{font-size: 21px; font-weight: lighter;}
+.con_list > div > dl > dd:last-child{font-size: 21px; font-weight: lighter; line-height: 35px;}
 .enjoy{
   position: absolute;
   bottom: 15px; right: 15%;

@@ -1,5 +1,5 @@
 
-html, body{transition: 0.5s;}
+html, body{transition: 0.5s; background: #111;}
 
 /* main */
 .intro{

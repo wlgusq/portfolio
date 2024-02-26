@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZIH-PORTPOLIO</title>
   <!-- 파비콘 -->
   <link href="./images/favicon_back.png" type="image/x-icon" rel="shortcut icon">
@@ -14,404 +14,88 @@
 
   <!-- 아이콘폰트 주소 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" type="text/css">
+  
+<style>
+html, body{background: #000;}
+#load{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+#load > span{
+  font-family: "Oleo Script"; 
+}
+
+.erase{
+  color: #000;
+  animation: erase 3s;
+  font-size: 15vw;
+}
+
+@keyframes erase{
+  0%{color: #fff;}
+  100%{color: #000;}
+}
+
+.z{
+  position: absolute;
+  top: 50%; left: 50%;
+  font-size: 30vw;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation: z 7s;
+  color: #fff;
+}
+@keyframes z{
+  0%{font-size: 15vw !important; top: 50%; left: -15%;}
+  100%{font-size: 30vw; top: 50%; left: 50%;}
+}
+.h{
+  position: absolute;
+  z-index: 2;
+  font-size: 7.2vw; 
+  top: 77%; right: 35%;
+  animation: h 5s;
+}
+@keyframes h{
+  0%{font-size: 15vw; top: 10%; right: 60%; color: #fff;}
+  100%{font-size: 7.2vw; top: 77%; right: 35%; color: #000 !important;}
+}
+
+
+  </style>
 </head>
+
 <body>
-
-<header>
-  <h1>
-    <a href="javascript:;" title="logo" class="logo">zihyun</a>
-  </h1>
-
-    
-  <a href="index.html" title="top_btn" id="top_btn">
-    <div class="down"></div>
-    <div class="scroll"><span class="cur"></span><br></div>
-    <div class="top">Top</div>
-  </a>
-
-  <!-- <span class="top_scr">scroll</span> -->
-  <div class="mnu">MENU</div>
-
-
-</header>
-
-
-
-
-
-<main>
-  <div id="load">
+  <main>
+    <div id="load">
       <span class="z">Z</span>
+      <span class="erase">i &nbsp; &nbsp; </span>
       <span class="h">H</span>
-  </div>
-
-
-
-
-  <article class="intro box">
-    <span class="info"><i class="fa-solid fa-info"></i> &nbsp;해당 포트폴리오는 1920 X 1080 해상도에 최적화되어 있습니다</span>
-
-    <div class="intro_txt">
-      <span>welcome to</span>
-      <span>my</span>
-      <ul class="change">
-        <li>passionate</li>
-        <li>creative</li>
-        <li>talented</li>
-        <li>unique</li>
-        <li>only one</li>
-      </ul>
-      <span>portfolio</span>
+      <span class="erase">y</span>
+      <span class="erase">u</span>
+      <span class="erase">n</span>
     </div>
-
-    <img src="./images/hi.png" alt="hi 말풍선">
-
-    <p class="scr_down">If you want to see my portfolio, <br>please scroll down</p>
-
-    <span class="line"></span>
-  </article>
+  </main>
 
 
 
 
-  <!-- profile -->
-  <article class="profile box">
-    <h2 style="display: none;">profile</h2>
-    <div class="cover_wrap">
-      <div class="cover">
-        <p class="first-parallel"></p>
-      </div>
-      <div class="cover">
-        <p class="second-parallel"></p>
-      </div>
-      <div class="cover">
-        <p class="third-parallel"></p>
-      </div>
-    </div>
+  <!-- 제이쿼리 -->
+  <script>
+    function window_onload() {
+        setTimeout('go_url()', 6000);
+    }
+    function go_url() {
+        location.href = './main.html'
+    }
 
-    <div class="profile_btn">
-      profile
-    </div>
+    window_onload();
+  </script>
 
-    <div class="more_pro">
-      <div class="more_inner">
-        <div class="pro_close">Close</div>
-
-        <img src="./images/pro_hi.png" alt="아이콘" class="hi_img">
-    
-        <h2>About Me</h2>
-        <div class="pro_info">
-          Jihyun Park<br>
-          2002.10.03<br>
-          010-7104-6326<br>
-          zih2521@naver.com
-        </div>
-
-        <div class="lied">
-          <dl>
-            <dt>license</dt>
-            <dd><span>2018</span></dd>
-            <dd>GTQ 포토샵 1급</dd>
-          </dl>
-          <dl>
-            <dt>education</dt>
-            <dd><span>2023.09-2024.02</span></dd>
-            <dd>그린컴퓨터아카데미 종로 수료<br>
-            [디지털디자인]<br>
-            UI/UX반응형 웹디자인 & 웹퍼블리셔(코딩) 개발자</dd>
-            <dd><span>2020</span></dd>
-            <dd>동구마케팅고등학교 졸업<br>
-            문화콘텐츠마케팅과</dd>
-          </dl>
-        </div>
-
-        <div class="skill">
-          <dl>
-            <dt>skills</dt>
-            <dd><p>html</p> <div class="bar"><span class="bar1"></span></div>90%</dd>
-            <dd><p>css</p> <div class="bar"><span class="bar2"></span></div>90%</dd>
-            <dd><p>javascript</p> <div class="bar"><span class="bar3"></span></div>45%</dd>
-            <dd><p>jquery</p> <div class="bar"><span class="bar4"></span></div>65%</dd>
-            <dd><p>sass</p> <div class="bar"><span class="bar5"></span></div>80%</dd>
-            <dd><p>bootstrap</p> <div class="bar"><span class="bar6"></span></div>60%</dd>
-            <dd><p>figma</p> <div class="bar"><span class="bar7"></span></div>85%</dd>
-            <dd><p>photoshop</p> <div class="bar"><span class="bar8"></span></div>80%</dd>
-            <dd><p>illustrator</p> <div class="bar"><span class="bar9"></span></div>75%</dd>
-            <dd><p>project plan</p> <div class="bar"><span class="bar10"></span></div>90%</dd>
-            <dd><p>github</p> <div class="bar"><span class="bar11"></span></div>80%</dd>
-          </dl>
-        </div>
-      </div>
-  </div>
-
-  </article>
-
-
-
-
-  <!-- project -->
-  <section class="greencar box">
-    <ul>
-      <li class="gre_mok">
-        <img src="./images/greencar_mok.png" alt="그린카 목업">
-      </li>
-      <li>
-        <span class="num">1 / 4</span>
-        <h2>greencar</h2>
-        <p>Responsive Web</p>
-        <span>기존 적응형 페이지를 반응형 페이지로 변경하며,<br> 
-          디자인을 수정한 웹사이트입니다.</span>
-        <div>
-          <a href="https://wlgusq.github.io/greencar/" title="사이트 바로가기">website</a>
-          <a href="javascript:;" title="피그마 바로가기">figma</a>
-        </div>
-
-        <div class="use">figma . html . css . jquery</div>
-      </li>
-    </ul>
-  </section>
-  <section class="lush box">
-    <ul>
-      <li class="lush_mok">
-        <img src="./images/lush_mok.png" alt="러쉬 목업">
-      </li>
-      <li>
-        <span class="num">2 / 4</span>
-        <h2>lush</h2>
-        <p>Responsive Web</p>
-        <span>기존 적응형 페이지를 반응형 페이지로 변경하며,<br> 
-          디자인을 수정한 웹사이트입니다.</span>
-        <div>
-          <a href="javascript:;" title="사이트 바로가기">website</a>
-          <a href="javascript:;" title="피그마 바로가기">figma</a>
-        </div>
-
-        <div class="use">figma . html . css . jquery</div>
-      </li>
-    </ul>
-  </section>
-  <section class="watcha box">
-    <ul>
-      <li class="wat_mok">
-        <img src="./images/watcha_mok.png" alt="왓챠 목업">
-      </li>
-      <li>
-        <span class="num">3 / 4</span>
-        <h2>watcha</h2>
-        <p>Adaptive Web</p>
-        <span>기존 왓챠 페이지의 레이아웃을 변경하고,<br> 
-          디자인을 수정한 웹사이트입니다.</span>
-        <div>
-          <a href="javascript:;" title="사이트 바로가기">website</a>
-          <a href="javascript:;" title="피그마 바로가기">figma</a>
-        </div>
-
-        <div class="use">html . css . jquery</div>
-      </li>
-    </ul>
-  </section>
-  <section class="via box">
-    <ul>
-      <li class="via_mok">
-        <img src="./images/via_mok.png" alt="비아 목업">
-      </li>
-      <li>
-        <span class="num">4 / 4</span>
-        <h2>via</h2>
-        <p>Adaptive Web</p>
-        <span>여행을 테마로 브랜드를 제작하고,<br>
-          pc버전, mobile버전 사이트를 제작한 웹사이트입니다.
-        </span>
-        <div>
-          <a href="javascript:;" title="사이트 바로가기">website</a>
-          <a href="javascript:;" title="피그마 바로가기">figma</a>
-        </div>
-
-        <div class="use"> illustration . figma . html . css . javascript</div>
-      </li>
-    </ul>
-  </section>
-
-
-
-
-<article class="clone box">
-  <h2>Clone Coding</h2>
-
-  <div class="clone_wrapper">
-    <div class="clone_inner harim">
-      <p>Harim pet-food</p>
-      <span>하림펫푸드 - 반응형웹</span>
-      <ul>
-        <li>
-          <button class="btn_cli">pc</button>
-          <div class="clone_img">
-            <img src="./images/macbook_mok.png" alt="맥북 목업" class="c_pc">
-            <span class="s_scr c_pc_screen">
-              <img src="./images/harim_pc.png" alt="하림 피시 버전">
-            </span>
-          </div>
-        </li>
-        <li>
-          <button>tablet</button>
-          <div class="clone_img">
-            <img src="./images/ipad_mok.png" alt="맥북 목업" class="c_pad">
-            <span class="s_scr c_tab_screen">
-              <img src="./images/harim_tablet.png" alt="하림 피시 버전">
-            </span>
-          </div>
-        </li>
-        <li>
-          <button>mobile</button>
-          <div class="clone_img">
-            <img src="./images/iphone_mok.png" alt="맥북 목업" class="c_mob">
-            <span class="s_scr c_mobile_screen">
-              <img src="./images/harim_mobile.png" alt="하림 피시 버전">
-            </span>
-          </div>
-        </li>
-      </ul>
-
-      <a href="https://wlgusq.github.io/harim/" title="하림펫푸드 사이트 보기"><i class="fas fa-chevron-right"></i></a>
-    </div>
-  </div>
-</article>
-
-
-
-
-<article class="clone c_last box">
-
-  <div class="clone_wrapper">
-    <div class="clone_inner africa">
-      <p>Africa Animal Medical Center</p>
-      <span>아프리카 동물 병원 - 적응형웹</span>
-      <ul>
-        <li>
-          <button class="btn_cli">pc</button>
-          <div class="clone_img">
-            <img src="./images/macbook_mok.png" alt="맥북 목업" class="c_pc">
-            <span class="s_scr c_pc_screen">
-              <img src="./images/africa_pc.png" alt="아프리카 피시 버전">
-            </span>
-          </div>
-        </li>
-        <li>
-          <button>mobile</button>
-          <div class="clone_img">
-            <img src="./images/iphone_mok.png" alt="맥북 목업" class="c_mob">
-            <span class="s_scr c_mobile_screen">
-              <img src="./images/africa_mobile.png" alt="아프리카 피시 버전">
-            </span>
-          </div>
-        </li>
-      </ul>
-
-      <a href="https://wlgusq.github.io/africa/" title="아프리카동물병원 사이트 보기"><i class="fas fa-chevron-right"></i></a>
-    </div>
-  </div>
-</article>
-
-
-
-
-<article class="ix box">
-
-  <div class="ix_mnu">
-    <span class="g_l">GREENY logo</span>
-    <div class="g_l_box">
-      <!-- <img src="./images/greeny_logo.png" alt="그리니 로고">
-      <img src="./images/greeny_short.png" alt="그리니 로고2"> -->
-    </div>
-    <span class="g_s">GREENY site design</span>
-    <div class="g_s_box">
-      <!-- <img src="./images/greeny_site.png" alt="그리니 사이트"> -->
-    </div>
-    <span class="m_l">Your Meili logo</span>
-    <div class="m_l_box">
-      <!-- <img src="./images/meili_long.png" alt="메일리 로고">
-      <img src="./images/meili_short.png" alt="메일리 로고2"> -->
-    </div>
-    <span class="i_ix">Iphone UI/UX</span>
-    <div class="i_ix_box"></div>
-  </div>
-
-
-  <!-- 지인에게 가게 분위기와 맞는 다이아몬드
-  로고 디자인을 부탁받아 간판과 포장 등에 사용할
-  로고 2가지를 제작하였습니다.
-
-  '그리니' 아이스크림 브랜드를 제작하였고,
-  아이스크림 분위기에 잘 맞을 수 있도록 로고를 
-  제작하였습니다. -->
-</article>
-
-
-
-<article class="contact box">
-  <div class="c_h2_box">
-    <h2>LET'S</h2>
-    <h2>WORK</h2>
-    <h2>TOGETHER</h2>
-  </div>
-
-  <span>사람들의 시선을 사로잡는 UI와 누구나 쉽게 사용할 수 있는 UX<br>를 제작하는 웹 퍼블리셔가 되겠습니다 !</span>
-
-  <a href="javascript:;" title="github" class="git">github</a>
-  <a href="javascript:;" title="resume" class="res">resume</a>
-
-</article>
-
-
-
-
-<article class="con_list">
-  <div>
-    <dl>
-      <dt><i class="fa-solid fa-phone"></i></dt>
-      <dd>Phone</dd>
-      <dd>010-7104-6326</dd>
-    </dl>
-    <dl>
-      <dt><i class="fa-solid fa-message"></i></dt>
-      <dd>Kakao</dd>
-      <dd>ID : zih2521</dd>
-    </dl>
-    <dl>
-      <dt><i class="fa-solid fa-envelope"></i></dt>
-      <dd>Email</dd>
-      <dd>zih2521@naver.com<br>
-      ziih2521@gmail.com</dd>
-    </dl>
-    <!-- <dl>
-      <dt><i class="fa-solid fa-envelope"></i></dt>
-      <dd>Email</dd>
-      <dd>ziih2521@gmail.com</dd>
-    </dl> -->
-  </div>
-
-  <p class="enjoy">I hope you enjoy my portfolio</p>
-</article>
-
-
-</main>
-
-
-
-
-<footer>
-  <address>copyright&copy;2024.JIHYUN all rights reserved.</address>
-</footer>
-
-
-
-<!-- 제이쿼리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="./script/main.js"></script>
-
-
-
-
+  
 </body>
 </html>

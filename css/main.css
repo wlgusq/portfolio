@@ -28,9 +28,43 @@ html, body{transition: 0.5s; background: #111;}
   position: absolute;
   transform: translateX(-50%);
 }
-.intro_txt > span:first-child{top: 17%; left: 50%;}
-.intro_txt > span:nth-child(2){top: 37%;}
-.intro_txt > span:last-child{bottom: 28%; left: 50%;}
+.intro_txt > span:first-child{top: 17%; left: 50%; animation: welcome 1.5s;}
+.intro_txt > span:nth-child(2){top: 37%; left: 30%; animation: my 1.5s;}
+.intro_txt > span:last-child{bottom: 28%; left: 50%; animation: port 1.5s;}
+.change{
+  position: absolute;
+  top: 38%; left: 35%;
+  width: 800px;
+  height: 116px;
+  /* background: #ff0; */
+  overflow: hidden;
+  animation: change 1.5s;
+}
+.change > li{
+  top: 40%; right: 10%;
+  font-family: "Cinzel";
+  color: #fff;
+  font-size: 6vw;
+}
+
+@keyframes welcome{
+  from{left: -10%; transform: translateX(0%);}
+  to{left: 50%; transform: translateX(-50%);}
+}
+@keyframes my{
+  from{left: -100%; transform: translateX(0%);}
+  to{left: 30%; transform: translateX(-50%);}
+}
+@keyframes change{
+  from{left: -50%;}
+  to{left: 35%;}
+}
+@keyframes port{
+  from{left: -150%; transform: translateX(0%);}
+  to{left: 50%; transform: translateX(-50%);}
+}
+
+
 
 .intro > img{
   position: absolute;
@@ -41,11 +75,17 @@ html, body{transition: 0.5s; background: #111;}
 
 .scr_down{
   position: absolute;
-  bottom: 35px; left: 50%;
+  left: 50%;
   transform: translateX(-50%);
   color: #FBF8F1;
   font-size: 14px;
   line-height: 30px;
+  animation: scr_down 1.5s infinite;
+}
+@keyframes scr_down{
+  0%{bottom: 30px;}
+  50%{bottom: 40px;}
+  100%{bottom: 30px;}
 }
 .line{
   background: rgba(255, 255, 255, .5);
@@ -58,20 +98,7 @@ html, body{transition: 0.5s; background: #111;}
   border-radius: 30px;
 }
 
-.change{
-  position: absolute;
-  top: 38%; right: 22%;
-  width: 800px;
-  height: 116px;
-  /* background: #ff0; */
-  overflow: hidden;
-}
-.change > li{
-  top: 40%; right: 10%;
-  font-family: "Cinzel";
-  color: #fff;
-  font-size: 6vw;
-}
+
 
 
 
@@ -290,7 +317,7 @@ section > ul > li:first-child img{
 
 
 
-section > ul > li:last-child{width: 50%; position: relative; color: #111;}
+section > ul > li:last-child{width: 50%; position: relative; color: #111; background: rgba(255, 255, 255, .4); border-radius: 200px;}
 section > ul > li:last-child > span.num{position: absolute; top: -25%; left: 50%; transform: translateX(-50%); font-size: 1.5vw; font-family: "Cinzel"; }
 section > ul > li:last-child > h2{text-transform: uppercase; font-size: 40px; font-weight: normal;}
 section > ul > li:last-child > p{font-size: 18px; margin-top: 20px; background: rgba(27, 30, 195, .6); padding: 7px 12px; border-radius: 30px; display: inline-block;}

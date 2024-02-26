@@ -38,20 +38,36 @@
 
 
 
-  if(s_pos>=7000){
-    $('html, body').css('background','#191919');
-    $('.africa').css('opacity','0');
-    // $('.ix > h2').css('color', '#000');
-    $('.logo').css('color', '#f4f3ef');
-    $('.scroll').css('background','rgba(245, 244, 240, .5)');
-    $('.cur').css('background','#f4f3ef');
-  }else{
+  if((7563>=s_pos)&&(2100<=s_pos)){
     $('html, body').css('background','#fff');
-    $('.africa').css('opacity','1');
-    // $('.ix > h2').css('color', '#F4F3EF');
+    // $('.ix > h2').css('color', '#000');
     $('.logo').css('color', '#111');
     $('.scroll').css('background', 'rgba(0, 0, 0, .5)');
     $('.cur').css('background','#111');
+  }else{
+    $('html, body').css('background','#111');
+    // $('.ix > h2').css('color', '#F4F3EF');
+    $('.logo').css('color', '#f4f3ef');
+    $('.scroll').css('background','rgba(245, 244, 240, .5)');
+    $('.cur').css('background','#f4f3ef');
+  }
+
+  if(s_pos>=7300){
+    $('.africa').css('opacity','0');
+  }else{
+    $('.africa').css('opacity','1');
+  }
+
+  if(s_pos>=7713){
+    $('.ix_mnu > span:first-child').css('left','20%');
+    $('.ix_mnu > span:nth-child(2)').css('right','20%');
+    $('.ix_mnu > span:nth-child(3)').css('left','20%');
+    $('.ix_mnu > span:last-child').css('right','20%');
+  }else{
+    $('.ix_mnu > span:first-child').css('left','-50%');
+    $('.ix_mnu > span:nth-child(2)').css('right','-50%');
+    $('.ix_mnu > span:nth-child(3)').css('left','-50%');
+    $('.ix_mnu > span:last-child').css('right','-50%');
   }
 
     // 클론코딩 메뉴 임시 고정
@@ -76,12 +92,14 @@
   }
 
   // 탑버튼 스크롤에 따라 변경
-  if(s_pos>=8271){
+  if(s_pos>=9550){
     $('.scroll').fadeOut();
     $('.top').fadeIn();
+    $('.con_list > div > dl > dt').css('animation','icon 1s');
   }else{
     $('.scroll').fadeIn();
     $('.top').fadeOut();
+    $('.con_list > div > dl > dt').css('animation','none');
   }
 
   // 탑버튼 위치 변경
@@ -129,12 +147,14 @@
     $('.via ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos>=7000){
+  if(s_pos>=8650){
+    $('.contact > span').css('bottom','40%');
     $('.git').css('bottom','25%');
     $('.res').css('bottom','14%');
   }else{
+    $('.contact > span').css('bottom','-10%');
     $('.git').css('bottom','-10%');
-    $('.res').css('bottom','-21%');
+    $('.res').css('bottom','-10%');
   }
 
 });

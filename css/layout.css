@@ -200,6 +200,7 @@ header{width: 100%;}
   color: #fff;
   font-size: 18px;
   line-height: 40px;
+  transition: 0.7s;
 }
 
 .contact > a{
@@ -216,8 +217,8 @@ header{width: 100%;}
   right: 17%;
 }
 .contact > a:hover{background: rgba(0, 0, 0,.3)}
-.git{bottom: 25%;}
-.res{bottom: 14%;}
+.git{bottom: 25%; transition: 1s;}
+.res{bottom: 14%; transition: 1.2s;}
 
 
 
@@ -235,6 +236,11 @@ header{width: 100%;}
 }
 .con_list > div > dl{color: #fff; width: 600px; margin: 70px 0px; padding-left: 150px; box-sizing: border-box;}
 .con_list > div > dl > dt{font-size: 25px;}
+@keyframes icon{
+  0%{transform: translateX(0px);}
+  50%{transform: translateX(100px);}
+  100%{transform: translateX(0px);}
+}
 .con_list > div > dl > dd:nth-child(2){font-size: 40px; margin: 50px 0px 35px 0px;}
 .con_list > div > dl > dd:last-child{font-size: 21px; font-weight: lighter; line-height: 35px;}
 .enjoy{

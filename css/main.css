@@ -404,7 +404,7 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: rgba
   line-height: 40px;
   font-size: 24px;
 }
-.clone_inner > a > i{color: #fff; font-size: 18px;}
+.clone_inner > a > i{color: #000; font-size: 18px;}
 .clone_inner > a:hover i{animation: right 2s infinite;}
 
 @keyframes right{

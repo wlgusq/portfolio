@@ -329,7 +329,7 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: rgba
 .clone_inner > ul > li >  button{
   width: 110px; height: 35px;
   border: 1px solid rgba(0, 0, 0, .3);
-  background: transparent;
+  background: #fff;
   color: #111;
   font-size: 16px;
   text-align: center;
@@ -370,7 +370,7 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: rgba
   width: 585px; height: 373px;
   position: absolute;
   top: 27px; left: 88px;
-  background: #ff0;
+  background: #fff;
   border-radius: 3px;
   overflow: hidden;
 }
@@ -378,15 +378,15 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: rgba
   width: 285px; height: 405px;
   position: absolute;
   bottom: 25px; left: 237px;
-  background: #0f0;
+  background: #fff;
   border-radius: 5px;
   overflow: hidden;
 }
 .c_mobile_screen{
   width: 155px; height: 341px;
   position: absolute;
-  bottom:50px; left: 302px;
-  background: #f00;
+  bottom:50px; left: 306px;
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -435,8 +435,34 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: rgba
   cursor: pointer;
   transition: 1s;
 }
-.ix_mnu > span:hover{color: #2A2DC2 !important;}
-.ix_mnu > span:first-child{color: #fff; top: 20%;}
-.ix_mnu > span:nth-child(2){color: #fff; top: 40%;}
-.ix_mnu > span:nth-child(3){color: #fff; top: 60%;}
-.ix_mnu > span:last-child{color: #fff; top: 80%;}
+.g_l{top: 20%; color: #154D2A;}
+.g_s{top: 40%; color: #EAC129;}
+.m_l{top: 60%; color: #EAA29F;}
+.i_ix{top: 80%; color: #2589E8;}
+
+.ix_mnu > span:hover{opacity: .3; transition: .3s;}
+
+.ix_mnu > div{
+  position: absolute;
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, .7);
+  border-radius: 30px;
+  opacity: 0;
+  transition: .5s;
+  z-index: 5;
+}
+
+.g_l_box > img{width: 300px;}
+.g_s_box > img{width: 400px;}
+.m_l_box > img{width: 300px;}
+
+.g_l_box{top: 20%; right: 3%;}
+.g_s_box{top: 40%; left: 3%; }
+.m_l_box{top: 60%; right: 3%;}
+.i_ix_box{top: 80%; left: 3%;}
+
+.g_l:hover ~ .g_l_box{opacity: 1;}
+.g_s:hover ~ .g_s_box{opacity: 1;}
+.m_l:hover ~ .m_l_box{opacity: 1;}
+.i_ix:hover ~ .i_ix_box{opacity: 1;}

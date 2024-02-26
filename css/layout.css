@@ -67,6 +67,22 @@ body::-webkit-scrollbar-thumb {
 
 header{width: 100%;}
 
+.mnu{
+  position: fixed;
+  top: 0px; right: 0px;
+  border-bottom-left-radius: 100%;
+  background: #000;
+  width: 200px; height: 60px;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  font-size: 26px;
+  z-index: 9999;
+  display: none;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
 
 /* scroll down icon*/
 #top_btn{
@@ -243,6 +259,7 @@ header{width: 100%;}
 }
 .con_list > div > dl > dd:nth-child(2){font-size: 40px; margin: 50px 0px 35px 0px;}
 .con_list > div > dl > dd:last-child{font-size: 21px; font-weight: lighter; line-height: 35px;}
+
 .enjoy{
   position: absolute;
   bottom: 15px; right: 15%;
@@ -261,3 +278,6 @@ footer > address{
   font-weight: lighter;
   letter-spacing: 3px;
 }
+
+
+

@@ -44,12 +44,20 @@
     $('.logo').css('color', '#111');
     $('.scroll').css('background', 'rgba(0, 0, 0, .5)');
     $('.cur').css('background','#111');
+    $('.mnu').css({'background':'#FBF8F1','color':'#000'});
   }else{
     $('html, body').css('background','#111');
     // $('.ix > h2').css('color', '#F4F3EF');
     $('.logo').css('color', '#f4f3ef');
     $('.scroll').css('background','rgba(245, 244, 240, .5)');
     $('.cur').css('background','#f4f3ef');
+    $('.mnu').css({'background':'#000','color':'#fff'});
+  }
+
+  if(s_pos>=1000){
+    $('.mnu').fadeIn();
+  }else{
+    $('.mnu').fadeOut();
   }
 
   if(s_pos>=7300){
@@ -59,15 +67,15 @@
   }
 
   if(s_pos>=7713){
-    $('.ix_mnu > span:first-child').css('left','20%');
-    $('.ix_mnu > span:nth-child(2)').css('right','20%');
-    $('.ix_mnu > span:nth-child(3)').css('left','20%');
-    $('.ix_mnu > span:last-child').css('right','20%');
+    $('.g_l').css('left','20%');
+    $('.g_s').css('right','20%');
+    $('.m_l').css('left','20%');
+    $('.i_ix').css('right','20%');
   }else{
-    $('.ix_mnu > span:first-child').css('left','-50%');
-    $('.ix_mnu > span:nth-child(2)').css('right','-50%');
-    $('.ix_mnu > span:nth-child(3)').css('left','-50%');
-    $('.ix_mnu > span:last-child').css('right','-50%');
+    $('.g_l').css('left','-50%');
+    $('.g_s').css('right','-50%');
+    $('.m_l').css('left','-50%');
+    $('.i_ix').css('right','-50%');
   }
 
     // 클론코딩 메뉴 임시 고정

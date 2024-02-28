@@ -66,11 +66,11 @@
     $('.africa').css('opacity','1');
   }
 
-  if(s_pos>=7713){
-    $('.g_l').css('left','20%');
-    $('.g_s').css('right','20%');
-    $('.m_l').css('left','20%');
-    $('.i_ix').css('right','20%');
+  if(s_pos>=7600){
+    $('.g_l').css('left','10%');
+    $('.g_s').css('right','10%');
+    $('.m_l').css('left','10%');
+    $('.i_ix').css('right','10%');
   }else{
     $('.g_l').css('left','-50%');
     $('.g_s').css('right','-50%');
@@ -300,4 +300,39 @@ apc_btn.click(function(){
 amob_btn.click(function(){
   $('.africa .c_pc_screen > img').animate({'top':'0px'},100);
   $('.africa .c_mobile_screen > img').delay(500).animate({'top':'-46px'},1000);
+});
+
+
+// uiux
+$('.ix_mnu > span').click(function(){
+  // alert('ldkdkdk')
+  $('.g_l').css({'left':'3%','text-align':'left'});
+  $('.g_s').css({'left':'3%','text-align':'left'});
+  $('.m_l').css({'left':'3%','text-align':'left'});
+  $('.i_ix').css({'left':'3%','text-align':'left'});
+});
+
+$('.g_l').click(function(){
+  $('.g_l_box').css('right','3%');
+  $('.g_s_box').css('right','-50%');
+  $('.m_l_box').css('right','-50%');
+  $('.i_ix_box').css('right','-50%');
+});
+$('.g_s').click(function(){
+  $('.g_l_box').css('right','-50%');
+  $('.g_s_box').css('right','3%');
+  $('.m_l_box').css('right','-50%');
+  $('.i_ix_box').css('right','-50%');
+});
+$('.m_l').click(function(){
+  $('.g_l_box').css('right','-50%');
+  $('.g_s_box').css('right','-50%');
+  $('.m_l_box').css('right','3%');
+  $('.i_ix_box').css('right','-50%');
+});
+$('.i_ix').click(function(){
+  $('.g_l_box').css('right','-50%');
+  $('.g_s_box').css('right','-50%');
+  $('.m_l_box').css('right','-50%');
+  $('.i_ix_box').css('right','3%');
 });

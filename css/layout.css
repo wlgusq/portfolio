@@ -1,6 +1,8 @@
 /* layout */
 /* "Oleo Script" */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oleo+Script:wght@400;700&display=swap');
+/* "Playfair Display" */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* "Noto Sans KR" */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 /* 'IBM Plex Sans KR' */
@@ -182,14 +184,14 @@ header{width: 100%;}
   color: #fff;
   font-size: 18px;
   line-height: 40px;
-  transition: 0.7s;
+  transition: 1s;
 }
 
 .contact > a{
   position: absolute;
   width: 300px;
   height: 40px;
-  background: rgba(0, 0, 0,.6);
+  background: #191919;
   color: #fff;
   font-size: 18px;
   padding: 12px 50px;
@@ -198,9 +200,9 @@ header{width: 100%;}
   text-align: center;
   right: 17%;
 }
-.contact > a:hover{background: rgba(0, 0, 0,.3)}
-.git{bottom: 25%; transition: 1s;}
-.res{bottom: 14%; transition: 1.2s;}
+.contact > a:hover{background: rgba(25, 25, 25, .5)}
+.git{bottom: 25%; transition: 1.5s;}
+.res{bottom: 14%; transition: 2s;}
 
 
 
@@ -217,20 +219,16 @@ header{width: 100%;}
   box-sizing: border-box;
 }
 .con_list > div > dl{color: #fff; width: 600px; margin: 70px 0px; padding-left: 150px; box-sizing: border-box;}
-.con_list > div > dl > dt{font-size: 25px;}
-@keyframes icon{
-  0%{transform: translateX(0px);}
-  50%{transform: translateX(100px);}
-  100%{transform: translateX(0px);}
-}
-.con_list > div > dl > dd:nth-child(2){font-size: 40px; margin: 50px 0px 35px 0px;}
-.con_list > div > dl > dd:last-child{font-size: 21px; font-weight: lighter; line-height: 35px;}
+.con_list > div > dl > dt{font-size: 25px; transition: 1s;}
+.con_list > div > dl > dd:nth-child(2){font-size: 40px; margin: 50px 0px 35px 0px; transition: 1s;}
+.con_list > div > dl > dd:last-child{font-size: 21px; font-weight: lighter; line-height: 35px; transition: 1.5s;}
 
 .enjoy{
   position: absolute;
   bottom: 15px; right: 15%;
   color: #FBF8F1;
   letter-spacing: 3px;
+  font-weight: lighter;
 }
 
 
@@ -243,6 +241,8 @@ footer > address{
   font-family: "Noto Sans KR";
   font-weight: lighter;
   letter-spacing: 3px;
+  font-family: "Playfair Display";
+  font-weight: lighter;
 }
 
 

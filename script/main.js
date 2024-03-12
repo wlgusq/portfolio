@@ -1,19 +1,5 @@
-// intro 스크롤
 
-  // 실시간
-  setInterval(function(){
-
-    let box = $('.change');
-    let move = $('.change li:first');
-    let ch = ()=> {
-      move.appendTo(box).show(300)
-    }
-
-    move.hide(300, ch);
-    
-  }, 3000);
-
-
+  // 스크롤 이벤트 모음
   $(window).scroll(function(){
     let s_pos = $(this).scrollTop();
     console.log(s_pos);
@@ -27,8 +13,6 @@
     $('.info').fadeIn();
   }
 
-
-
   // uiux 디자인 위 색상, 디자인 변경
   if(200<=s_pos) {
     $('.scroll').css('background', 'rgba(245, 244, 240, .5)');
@@ -36,46 +20,41 @@
     $('.scroll').css('background', 'none');
   }
 
-
-
-  if((7563>=s_pos)&&(2100<=s_pos)){
-    $('html, body').css('background','#fff');
-    // $('.ix > h2').css('color', '#000');
-    $('.logo').css('color', '#111');
-    $('.scroll').css('background', 'rgba(0, 0, 0, .5)');
-    $('.cur').css('background','#111');
-    $('.mnu').css({'background':'#FBF8F1','color':'#000'});
+  if(s_pos>=450){
+    $('change > li').css({'filter':'opacity(1)','transform':'translateY(0px)'})
   }else{
-    $('html, body').css('background','#111');
-    // $('.ix > h2').css('color', '#F4F3EF');
-    $('.logo').css('color', '#f4f3ef');
-    $('.scroll').css('background','rgba(245, 244, 240, .5)');
-    $('.cur').css('background','#f4f3ef');
-    $('.mnu').css({'background':'#000','color':'#fff'});
+    $('change > li').css({'filter':'opacity(0)','transform':'translateY(100px)'})
   }
 
-  if(s_pos>=1000){
-    $('.mnu').fadeIn();
+  if(s_pos>=2300){
+    $('.sub > h2').css({'filter':'opacity(1)','transform':'translateY(0px)'})
+    $('.sub > p').css({'filter':'opacity(1)','transform':'translateY(0px)'})
   }else{
-    $('.mnu').fadeOut();
+    $('.sub > h2').css({'filter':'opacity(0)','transform':'translateX(-150px)'})
+    $('.sub > p').css({'filter':'opacity(0)','transform':'translateX(-150px)'})
   }
 
-  if(s_pos>=7300){
+
+  // 배경 변경 등 서식 전체 일시 변경
+  //if((7563>=s_pos)&&(2852<=s_pos)){
+   // $('html, body').css('background','#fff');
+  //  $('.logo').css('color', '#111');
+  //  $('.scroll').css('background', 'rgba(0, 0, 0, .5)');
+  //  $('.cur').css('background','#111');
+  //  $('.mnu').css({'background':'#FBF8F1','color':'#000'});
+  //}else{
+  //  $('html, body').css('background','#111');
+ //   $('.logo').css('color', '#f4f3ef');
+  //  $('.scroll').css('background','rgba(245, 244, 240, .5)');
+  //  $('.cur').css('background','#f4f3ef');
+  //   $('.mnu').css({'background':'#000','color':'#fff'});
+  //}
+
+  // 디자인 페이지에서 아프리카 서서히 사라지기
+  if(s_pos>=8300){
     $('.africa').css('opacity','0');
   }else{
     $('.africa').css('opacity','1');
-  }
-
-  if(s_pos>=7600){
-    $('.g_l').css('left','10%');
-    $('.g_s').css('right','10%');
-    $('.m_l').css('left','10%');
-    $('.i_ix').css('right','10%');
-  }else{
-    $('.g_l').css('left','-50%');
-    $('.g_s').css('right','-50%');
-    $('.m_l').css('left','-50%');
-    $('.i_ix').css('right','-50%');
   }
 
     // 클론코딩 메뉴 임시 고정
@@ -100,29 +79,40 @@
   }
 
   // 탑버튼 스크롤에 따라 변경
-  if(s_pos>=9550){
+  if(s_pos>=10839){
     $('.scroll').fadeOut();
     $('.top').fadeIn();
-    $('.con_list > div > dl > dt').css('animation','icon 1s');
+    $('.con_list > div > dl > dt').css({'transform':'translateY(0px)','filter':'opacity(1)'});
+    $('.dd_tit').css({'transform':'translateY(0px)','filter':'opacity(1)'})
+    $('.dd_txt').css({'transform':'translate(0px, 0px)','filter':'opacity(1)'})
   }else{
     $('.scroll').fadeIn();
     $('.top').fadeOut();
-    $('.con_list > div > dl > dt').css('animation','none');
+    $('.con_list > div > dl > dt').css({'transform':'translateY(100px)','filter':'opacity(0)'});
+    $('.dd_tit').css({'transform':'translateY(150px)','filter':'opacity(0)'})
+    $('.dd_txt').css({'transform':'translate(-150px,30px)','filter':'opacity(0)'})
   }
 
   // 탑버튼 위치 변경
   if(s_pos>=200){
-    $('#top_btn').css({'right':'0%','tranform':'translateX(0)'});
+    $('#top_btn').css({'right':'0%','transform':'translateX(0)'});
     $('.scroll').css('opacity','1');
     // $('.top_scr').css('opacity','0');
   }else{
-    $('#top_btn').css({'right':'48%','tranform':'translateX(-50%)'});
+    $('#top_btn').css({'right':'48%','transform':'translateX(-50%)'});
     $('.scroll').css('opacity','0');
     // $('.top_scr').css('opacity','1');
   }
 
+  // 프로필 버튼
+  if(s_pos>=1500){
+    $('.profile_btn').fadeIn();
+  }else{
+    $('.profile_btn').fadeOut();
+  }
+
   // 프로젝트 애니메이션
-  if(s_pos<1838){
+  if(s_pos<3168){
     $('.gre_mok').css({'left':'15%','scale':'1.7'});
     $('.greencar ul li:last-child').fadeOut(2000);
   }else{
@@ -130,7 +120,7 @@
     $('.greencar ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<2757){
+  if(s_pos<4068){
     $('.lush_mok').css({'left':'15%','scale':'1.7'});
     $('.lush ul li:last-child').fadeOut(2000);
   }else{
@@ -138,7 +128,7 @@
     $('.lush ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<3676){
+  if(s_pos<4818){
     $('.wat_mok').css({'left':'15%','scale':'1.7'});
     $('.watcha ul li:last-child').fadeOut(2000);
   }else{
@@ -146,16 +136,31 @@
     $('.watcha ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<4595){
+  if(s_pos<5718){
     $('.via_mok').css({'left':'15%','scale':'1.7'});
     $('.via ul li:last-child').fadeOut(2000);
-    // $('.sub').show();
   }else{
     $('.via_mok').css({'left':'0%','scale':'1'});
     $('.via ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos>=8650){
+  if(s_pos<6540){
+    $('.harim_mok').css({'left':'15%','scale':'1.7'});
+    $('.harim ul li:last-child').fadeOut(2000);
+  }else{
+    $('.harim_mok').css({'left':'0%','scale':'1'});
+    $('.harim ul li:last-child').fadeIn(2000);
+  }
+
+  if(s_pos<7374){
+    $('.africa_mok').css({'left':'15%','scale':'1.7'});
+    $('.africa ul li:last-child').fadeOut(2000);
+  }else{
+    $('.africa_mok').css({'left':'0%','scale':'1'});
+    $('.africa ul li:last-child').fadeIn(2000);
+  }
+
+  if(s_pos>=9939){
     $('.contact > span').css('bottom','40%');
     $('.git').css('bottom','25%');
     $('.res').css('bottom','14%');
@@ -164,6 +169,33 @@
     $('.git').css('bottom','-10%');
     $('.res').css('bottom','-10%');
   }
+
+  // 디자인 페이지 일시적 고정
+  if((9638>=s_pos)&&(8624<=s_pos)){
+    $('.ix_fix_inner').addClass('fix');
+  }else{
+    $('.ix_fix_inner').removeClass('fix');
+  }
+
+  //디자인 픽스 부분 애니메이션
+  if(s_pos>=6949){
+    $('.ix_title > span').css({'transform':'translateY(0px)','filter':'opacity(1)'})
+  }else{
+    $('.ix_title > span').css({'transform':'translateY(500px)','filter':'opacity(0)'})
+  }
+
+  if(s_pos>=6928){
+    $('.ix_txt').css('transform','translateX(-50%)')
+  }else{
+    $('.ix_txt').css('transform','translateX(-150%)')
+  }
+
+    // 디자인 페이지 일시적 고정
+    if((9970>=s_pos)&&(8000<=s_pos)){
+      $('.ix_move').css('background','#eee');
+    }else{
+      $('.ix_move').css('background','#000');
+    }
 
 });
 
@@ -232,8 +264,6 @@ const pTag1 = document.querySelector('.first-parallel')
       animate()
 
 
-
-
 // 프로필 더보기
 $('.profile_btn').click(function(){
   // $('.pro_ment').fadeToggle();
@@ -258,6 +288,15 @@ $('.pro_close').click(function(){
   $('.more_pro').slideUp();
   $('.more_inner').fadeOut();
 });
+
+
+
+// 프로젝트 더보기
+$('.sub > p').click(function(){
+  //alert('dkdkdk');
+  $('.pro_list').slideToggle();
+});
+
 
 
 // 클론 탭메뉴

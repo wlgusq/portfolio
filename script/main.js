@@ -20,13 +20,13 @@
     $('.scroll').css('background', 'none');
   }
 
-  if(s_pos>=450){
-    $('change > li').css({'filter':'opacity(1)','transform':'translateY(0px)'})
+  if(s_pos>=350){
+    $('.change').css({'filter':'opacity(1)','transform':'translateY(0px)'})
   }else{
-    $('change > li').css({'filter':'opacity(0)','transform':'translateY(100px)'})
+    $('.change').css({'filter':'opacity(0)','transform':'translateY(100px)'})
   }
 
-  if(s_pos>=2300){
+  if(s_pos>=2700){
     $('.sub > h2').css({'filter':'opacity(1)','transform':'translateY(0px)'})
     $('.sub > p').css({'filter':'opacity(1)','transform':'translateY(0px)'})
   }else{
@@ -51,11 +51,11 @@
   //}
 
   // 디자인 페이지에서 아프리카 서서히 사라지기
-  if(s_pos>=8300){
-    $('.africa').css('opacity','0');
-  }else{
-    $('.africa').css('opacity','1');
-  }
+  // if(s_pos>=8300){
+  //   $('.africa').css('opacity','0');
+  // }else{
+  //   $('.africa').css('opacity','1');
+  // }
 
     // 클론코딩 메뉴 임시 고정
     if((7335>=s_pos)&&(5514<=s_pos)){
@@ -79,7 +79,7 @@
   }
 
   // 탑버튼 스크롤에 따라 변경
-  if(s_pos>=10839){
+  if(s_pos>=12000){
     $('.scroll').fadeOut();
     $('.top').fadeIn();
     $('.con_list > div > dl > dt').css({'transform':'translateY(0px)','filter':'opacity(1)'});
@@ -112,7 +112,7 @@
   }
 
   // 프로젝트 애니메이션
-  if(s_pos<3168){
+  if(s_pos<3600){
     $('.gre_mok').css({'left':'15%','scale':'1.7'});
     $('.greencar ul li:last-child').fadeOut(2000);
   }else{
@@ -120,7 +120,7 @@
     $('.greencar ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<4068){
+  if(s_pos<4500){
     $('.lush_mok').css({'left':'15%','scale':'1.7'});
     $('.lush ul li:last-child').fadeOut(2000);
   }else{
@@ -128,7 +128,7 @@
     $('.lush ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<4818){
+  if(s_pos<5400){
     $('.wat_mok').css({'left':'15%','scale':'1.7'});
     $('.watcha ul li:last-child').fadeOut(2000);
   }else{
@@ -136,7 +136,7 @@
     $('.watcha ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<5718){
+  if(s_pos<6300){
     $('.via_mok').css({'left':'15%','scale':'1.7'});
     $('.via ul li:last-child').fadeOut(2000);
   }else{
@@ -144,7 +144,7 @@
     $('.via ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<6540){
+  if(s_pos<7200){
     $('.harim_mok').css({'left':'15%','scale':'1.7'});
     $('.harim ul li:last-child').fadeOut(2000);
   }else{
@@ -152,7 +152,7 @@
     $('.harim ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos<7374){
+  if(s_pos<8100){
     $('.africa_mok').css({'left':'15%','scale':'1.7'});
     $('.africa ul li:last-child').fadeOut(2000);
   }else{
@@ -160,7 +160,7 @@
     $('.africa ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos>=9939){
+  if(s_pos>=11078){
     $('.contact > span').css('bottom','40%');
     $('.git').css('bottom','25%');
     $('.res').css('bottom','14%');
@@ -171,11 +171,12 @@
   }
 
   // 디자인 페이지 일시적 고정
-  if((9638>=s_pos)&&(8624<=s_pos)){
-    $('.ix_fix_inner').addClass('fix');
-  }else{
-    $('.ix_fix_inner').removeClass('fix');
-  }
+  // if((10500>=s_pos)&&(9400<=s_pos)){
+  // if((9489>=s_pos)&&(8589<=s_pos)){
+  //   $('.ix_fix_inner').addClass('fix');
+  // }else{
+  //   $('.ix_fix_inner').removeClass('fix');
+  // }
 
   //디자인 픽스 부분 애니메이션
   if(s_pos>=6949){
@@ -190,8 +191,8 @@
     $('.ix_txt').css('transform','translateX(-150%)')
   }
 
-    // 디자인 페이지 일시적 고정
-    if((9970>=s_pos)&&(8000<=s_pos)){
+    // 디자인 페이지 색상 적용
+    if((10800>=s_pos)&&(8700<=s_pos)){
       $('.ix_move').css('background','#eee');
     }else{
       $('.ix_move').css('background','#000');
@@ -343,35 +344,52 @@ amob_btn.click(function(){
 
 
 // uiux
-$('.ix_mnu > span').click(function(){
-  // alert('ldkdkdk')
-  $('.g_l').css({'left':'3%','text-align':'left'});
-  $('.g_s').css({'left':'3%','text-align':'left'});
-  $('.m_l').css({'left':'3%','text-align':'left'});
-  $('.i_ix').css({'left':'3%','text-align':'left'});
+// $('.ix_mnu > span').click(function(){
+//   $('.g_l').css({'left':'3%','text-align':'left'});
+//   $('.g_s').css({'left':'3%','text-align':'left'});
+//   $('.m_l').css({'left':'3%','text-align':'left'});
+//   $('.i_ix').css({'left':'3%','text-align':'left'});
+// });
+
+// $('.g_l').click(function(){
+//   $('.g_l_box').css('right','3%');
+//   $('.g_s_box').css('right','-50%');
+//   $('.m_l_box').css('right','-50%');
+//   $('.i_ix_box').css('right','-50%');
+// });
+// $('.g_s').click(function(){
+//   $('.g_l_box').css('right','-50%');
+//   $('.g_s_box').css('right','3%');
+//   $('.m_l_box').css('right','-50%');
+//   $('.i_ix_box').css('right','-50%');
+// });
+// $('.m_l').click(function(){
+//   $('.g_l_box').css('right','-50%');
+//   $('.g_s_box').css('right','-50%');
+//   $('.m_l_box').css('right','3%');
+//   $('.i_ix_box').css('right','-50%');
+// });
+// $('.i_ix').click(function(){
+//   $('.g_l_box').css('right','-50%');
+//   $('.g_s_box').css('right','-50%');
+//   $('.m_l_box').css('right','-50%');
+//   $('.i_ix_box').css('right','3%');
+// });
+
+
+
+// ix 클릭
+
+$('.g_site > li:last-child > .ix_view').click(function(){
+  $('.g_popup').fadeIn();
+});
+$('.v_site > li:last-child > .ix_view').click(function(){
+  $('.v_popup').fadeIn();
 });
 
-$('.g_l').click(function(){
-  $('.g_l_box').css('right','3%');
-  $('.g_s_box').css('right','-50%');
-  $('.m_l_box').css('right','-50%');
-  $('.i_ix_box').css('right','-50%');
+$('.g_popup > .fa-close').click(function(){
+  $('.g_popup').fadeOut();
 });
-$('.g_s').click(function(){
-  $('.g_l_box').css('right','-50%');
-  $('.g_s_box').css('right','3%');
-  $('.m_l_box').css('right','-50%');
-  $('.i_ix_box').css('right','-50%');
-});
-$('.m_l').click(function(){
-  $('.g_l_box').css('right','-50%');
-  $('.g_s_box').css('right','-50%');
-  $('.m_l_box').css('right','3%');
-  $('.i_ix_box').css('right','-50%');
-});
-$('.i_ix').click(function(){
-  $('.g_l_box').css('right','-50%');
-  $('.g_s_box').css('right','-50%');
-  $('.m_l_box').css('right','-50%');
-  $('.i_ix_box').css('right','3%');
+$('.v_popup > .fa-close').click(function(){
+  $('.v_popup').fadeOut();
 });

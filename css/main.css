@@ -67,7 +67,7 @@ html, body{transition: 0.5s; background: #000;}
   position: absolute;
   top: 65%; right: 5%;
 }
-.change > li{
+.change > p{
   font-family: "Cinzel";
   color: #fff;
   font-size: 2.5vw;
@@ -581,26 +581,23 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: #888
 
 /* uxui 디자인 */
 .ix{
-  height: 200vh;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1678px;
+  width: 100%;
   margin-top: 150px;
 }
 
-.ix_fixed{
+.ix_sticky{
+  height: 700px;
   width: 40%;
-  position: absolute;
-  left: 0px; top: 0px;
-}
-.ix_fix_inner{
-  height: 100vh;
-  width: 100%;
-  position: relative;
+  position: sticky;
+  top: 10px; left: 0px;
+  /* background: #ff0; */
 }
 .ix_title{
   width: 550px;
   position: absolute;
-  top: 15%; left: 50%;
+  top: 10%; left: 50%;
   transform: translateX(-50%);
 }
 .ix_title > p{
@@ -620,7 +617,7 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: #888
 .ix_txt{
   width: 70%;
   position: absolute;
-  top: 60%; left: 50%;
+  bottom: 10%; left: 50%;
   transform: translateX(-50%);
   color: #fff;
   font-size: 20px;
@@ -636,11 +633,7 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: #888
   font-size: 16px;
 }
 
-.fix{
-  position: fixed;
-  top: 0px; left: 0px;
-  width: 40%;
-}
+
 
 
 .ix_move{
@@ -704,3 +697,49 @@ section > ul > li:last-child > .use{position: absolute; bottom: 30%; color: #888
 
 .ix_art:nth-child(2) > li:last-child:hover .ix_view{filter: opacity(1);}
 .ix_art:last-child > li:last-child:hover .ix_view{filter: opacity(1);}
+
+
+.popup{
+  position: fixed;
+  top: 0px; left: 0px;
+  background: rgba(0, 0, 0, .8);
+  z-index: 9000;
+  width: 100%; height: 100vh;
+  overflow-y: scroll;
+  display: none;
+}
+
+.popup::-webkit-scrollbar {
+  width: 7px;
+}
+.popup::-webkit-scrollbar-track {
+  transition: .5s;
+}
+.popup::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  box-shadow: inset 0 0 50px #fff;
+}
+
+.pop_img{
+  position: absolute;
+  top: 0px; left: 50%;
+  transform: translateX(-50%);
+}
+.greeny_img{width: 1200px;}
+.via_img{width: 420px;}
+.fa-close{
+  color: #fff;
+  position: fixed;
+  top: 3%; right: 10%;
+  font-size: 30px;
+  font-weight: lighter;
+}
+.fa-close:hover{
+  animation: close 1s;
+  color: #ccc; 
+}
+
+@keyframes close{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(180deg);}
+}

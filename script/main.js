@@ -79,7 +79,7 @@
   }
 
   // 탑버튼 스크롤에 따라 변경
-  if(s_pos>=12000){
+  if(s_pos>=10442){
     $('.scroll').fadeOut();
     $('.top').fadeIn();
     $('.con_list > div > dl > dt').css({'transform':'translateY(0px)','filter':'opacity(1)'});
@@ -160,7 +160,7 @@
     $('.africa ul li:last-child').fadeIn(2000);
   }
 
-  if(s_pos>=11078){
+  if(s_pos>=9442){
     $('.contact > span').css('bottom','40%');
     $('.git').css('bottom','25%');
     $('.res').css('bottom','14%');
